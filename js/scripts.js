@@ -77,10 +77,10 @@ function checkWinCondition() {
 
         if(b1Child == 'x' && b2Child == 'x' && b3Child == 'x') {
             // x
-            console.log('x venceu');
+            declareWinner('x');
         } else if (b1Child == 'o' && b2Child == 'o' && b3Child == 'o'){
             // o
-            console.log('o venceu');
+            declareWinner('o');
         }
     }
 
@@ -93,10 +93,10 @@ function checkWinCondition() {
 
         if(b4Child == 'x' && b5Child == 'x' && b6Child == 'x') {
             // x
-            console.log('x venceu');
+            declareWinner('x');
         } else if (b4Child == 'o' && b5Child == 'o' && b6Child == 'o'){
             // o
-            console.log('o venceu');
+            declareWinner('o');
         }
     }
 
@@ -109,10 +109,10 @@ function checkWinCondition() {
 
         if(b7Child == 'x' && b8Child == 'x' && b9Child == 'x') {
             // x
-            console.log('x venceu');
+            declareWinner('x');
         } else if (b7Child == 'o' && b8Child == 'o' && b9Child == 'o'){
             // o
-            console.log('o venceu');
+            declareWinner('o');
         }
     }
 
@@ -125,10 +125,10 @@ function checkWinCondition() {
 
         if(b1Child == 'x' && b4Child == 'x' && b7Child == 'x') {
             // x
-            console.log('x venceu');
+            declareWinner('x');
         } else if (b1Child == 'o' && b4Child == 'o' && b7Child == 'o'){
             // o
-            console.log('o venceu');
+            declareWinner('o');
         }
     }
 
@@ -141,10 +141,10 @@ function checkWinCondition() {
 
         if(b2Child == 'x' && b5Child == 'x' && b8Child == 'x') {
             // x
-            console.log('x venceu');
+            declareWinner('x');
         } else if (b2Child == 'o' && b5Child == 'o' && b8Child == 'o'){
             // o
-            console.log('o venceu');
+            declareWinner('o');
         }
     }
 
@@ -157,10 +157,10 @@ function checkWinCondition() {
 
         if(b3Child == 'x' && b6Child == 'x' && b9Child == 'x') {
             // x
-            console.log('x venceu');
+            declareWinner('x');
         } else if (b3Child == 'o' && b6Child == 'o' && b9Child == 'o'){
             // o
-            console.log('o venceu');
+            declareWinner('o');
         }
     }
 
@@ -173,10 +173,10 @@ function checkWinCondition() {
 
         if(b1Child == 'x' && b5Child == 'x' && b9Child == 'x') {
             // x
-            console.log('x venceu');
+            declareWinner('x');
         } else if (b1Child == 'o' && b5Child == 'o' && b9Child == 'o'){
             // o
-            console.log('o venceu');
+            declareWinner('o');
         }
     }
 
@@ -189,10 +189,10 @@ function checkWinCondition() {
 
         if(b3Child == 'x' && b5Child == 'x' && b7Child == 'x') {
             // x
-            console.log('x venceu');
+            declareWinner('x');
         } else if (b3Child == 'o' && b5Child == 'o' && b7Child == 'o'){
             // o
-            console.log('o venceu');
+            declareWinner('o');
         }
     }
 
@@ -206,9 +206,46 @@ function checkWinCondition() {
     }
 
     if(counter == 9) {
-        console.log('deu velha');
+        declareWinner('deu velha');
+    }
+}
+
+// limpa o jogo, declara o vencedor e atualiza o placar
+function declareWinner(winner){
+
+    let scoreboardX = document.querySelector("#scoreboard-1");
+    let scoreboardY = document.querySelector("#scoreboard-2");
+    let msg = '';
+
+    if(winner == 'x'){
+        scoreboardX.textContent = parseInt(scoreboardX.textContent) + 1;
+        msg = "O jogador 1 venceu!";
+    } else if (winner == 'o'){
+        scoreboardY.textContent = parseInt(scoreboardY.textContent) + 1;
+        msg = "O jogador 2 venceu!";
+    } else {
+        msg = "Deu velha!";
     }
 
+    // exibir msg na tela 
+    messageText.innerHTML = msg;
+    messageContainer.classList.remove("hide");
 
+    // esconde msg
+    setTimeout(function(){
+        messageContainer.classList.add("hide");
+    }, 3000);
+
+    // zera as jogadas
+    player1 = 0;
+    player2 = 0;
+
+    // remove X e O 
+    let boxesToRemove = document.querySelectorAll(".box div");
+
+    for(let i = 0; i < boxesToRemove.length; i++) {
+        boxesToRemove[i].parentNode.removeChild(boxesToRemove[i]);
+    }
 }
+
 

@@ -73,9 +73,9 @@ h1 {
 
 /* class hide */
 
-/* .hide {
+.hide {
     display: none !important;
-} */
+}
 
 /* scoreboard */
 
@@ -120,5 +120,4 @@ h1 {
     background-color: cadetblue;
     color: #fff;
     padding: 20px;
-    display: none;
 }
