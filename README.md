@@ -1,7 +1,7 @@
 <h1>Jogo da Velha</h1>
 
 <p>Treinando o HTML, CSS e JavaScript com muita lógica</p>
-
+</br>
 ## 🤝 Contribuindo
 <p>
 Este repositório foi criado para fins de estudo. Fique a vontade para contribuir!
