@@ -1,4 +1,4 @@
-<h1>Jogo da Velha</h1>
+<h1>tic-tac-toe</h1>
 
 <p>Treinando o HTML, CSS e JavaScript com muita lógica</p>
 </br>

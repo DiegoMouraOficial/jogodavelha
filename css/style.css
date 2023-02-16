@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image:  linear-gradient(rgba(177, 207, 252, 0.905), rgba(208, 241, 185, 0.905)), url(/images/jogoVelha.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.btn #start-game-button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: #2ab325;
+    border: none;
+    color: #fff;
+    margin-right: 20px;
+    border-radius: 5%;
+}
+
+.btn #reset-game-button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: #139bda;
+    border: none;
+    color: #fff;
+    margin-left: 20px;
+    border-radius: 5%;
+}
+
+.btn #start-game-button:hover {
+    opacity: 0.8;
+    background-color: #094b06;
+}
+
+.btn #reset-game-button:hover {
+    opacity: 0.8;
+    background-color: #0a597e;
+}
+
+#quadro {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  
+td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 36px;
+    border: 1px solid black;
+  }
+  
+#resultado {
+    margin-top: 25px;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 20px;
+    color: brown;
+  }
+  
+ 
